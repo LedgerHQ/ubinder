@@ -36,7 +36,7 @@ C++ implementation is provided inside `include/cpp_wrapper.hpp`
 
 After you have build wrapper library, follow instruction inside `src/{platform}` for building binding for specific host. (ex. `src/node` include instruction how to build Node.js binding)
 
-## Building
+## Build
 
 Ubinder has no dependency
 ```shell
@@ -45,13 +45,34 @@ cd ./build
 cmake -G"put here you build system" ..
 cmake --build . --config Release
 ```
+### Build Example
 
-If you want to build examples you will need to install [stlab](http://stlab.cc/) and [protobuf](https://developers.google.com/protocol-buffers/)
-One of easy way to do this is with [vcpkg](https://github.com/Microsoft/vcpkg), then
+If you want to build examples you will need to install [stlab](http://stlab.cc/) and [protobuf](https://developers.google.com/protocol-buffers/).
+
+#### Windows
+
+One of easy way to do this is with [vcpkg](https://github.com/Microsoft/vcpkg), then:
 ```
 vcpkg install stlab
 vcpkg install protobuf
 ```
+#### MacOS
+
+To install `protobuf` you can use [Homebrew](https://brew.sh/):
+```
+brew install protobuf 
+```
+For stlab, best way is to build from sources of [stlab](https://github.com/stlab/libraries):
+```
+git clone https://github.com/stlab/libraries.git 
+cd libraries
+./setup_xcode.sh
+cd build 
+make install
+```
+... and you are good to go !
+
+### Configuration and build
 
 Then configuration will be like
 ```

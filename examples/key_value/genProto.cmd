@@ -1,1 +1,1 @@
-protoc -I ./proto --java_out=./java/JavaKV/src/main/java/messages --js_out=import_style=commonjs,binary:./node/generated ./proto/messages.proto 
+protoc -I ./proto --cpp_out=./wrapped_lib/generated --java_out=./java/JavaKV/src/main/java/messages --js_out=import_style=commonjs,binary:./node/generated ./proto/messages.proto

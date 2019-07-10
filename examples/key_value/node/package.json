@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "gypfile": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "node-gyp rebuild --debug"
+    "debug": "node-gyp rebuild --debug",
+    "install": "node-gyp configure && node-gyp build"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +16,8 @@
     "google-protobuf": "^3.8.0",
     "nan": "^2.14.0",
     "npm": "^6.9.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^5.0.2"
   }
 }
